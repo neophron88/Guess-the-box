@@ -71,10 +71,11 @@
                 "versionCodeHintTextView,versionCodeHintTextView,nameHintTextView" />
 
         <TextView
+            android:id="@+id/appNameTextView"
             style="@style/HintTextView.Value"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/fragment_navigation_example"
+            tools:text="@string/fragment_navigation_example"
             app:layout_constraintBaseline_toBaselineOf="@id/nameHintTextView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@id/barrier" />

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/text1"
+        style="@style/HintTextView.Value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_200"
+        android:padding="8dp"
+        android:text="Hello Bro"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/text2"
+        style="@style/HintTextView.Value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_200"
+        android:padding="8dp"
+        android:text="Hello Bro"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/text3"
+        style="@style/HintTextView.Value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_200"
+        android:padding="8dp"
+        android:text="Hello Bro"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/text4"
+        style="@style/HintTextView.Value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_200"
+        android:padding="8dp"
+        android:text="Hello Bro"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/text5"
+        style="@style/HintTextView.Value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_200"
+        android:padding="8dp"
+        android:text="Hello Bro"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/text6"
+        style="@style/HintTextView.Value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_200"
+        android:padding="8dp"
+        android:text="Hello Bro"
+        android:textSize="20sp"
+        />
+
+    <TextView
+        android:id="@+id/text7"
+        style="@style/HintTextView.Value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_200"
+        android:padding="8dp"
+        android:text="Hello Bro"
+        android:textSize="20sp" />
+
+
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flow"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:flow_horizontalGap="18dp"
+        app:flow_horizontalStyle="packed"
+        app:flow_verticalBias="0"
+        app:flow_verticalStyle="packed"
+        app:flow_maxElementsWrap="3"
+        app:flow_verticalGap="6dp"
+        app:flow_wrapMode="chain"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:constraint_referenced_ids="text1,text2,text3,text4,text5,text6,text7"
+
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

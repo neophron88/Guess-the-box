@@ -43,18 +43,13 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/titleTextView" />
 
-<!--            <item name="overlapAnchor">true</item>-->
-<!--            <item name="android:paddingStart">8dp</item>-->
-<!--            <item name="android:paddingEnd">8dp</item>-->
-<!--            <item name="android:paddingTop">6dp</item>-->
-<!--            <item name="android:paddingBottom">6dp</item>-->
-<!--            <item name="android:gravity">center_vertical</item>-->
 
         <Spinner
             android:id="@+id/boxCountSpinner"
             android:layout_width="wrap_content"
             android:minWidth="180dp"
             android:minHeight="36dp"
+            android:paddingStart="8dp"
             android:background="@drawable/spinner_background"
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"

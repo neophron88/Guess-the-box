@@ -1,6 +1,7 @@
 package org.rasulov.guessthebox.fragments
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -37,6 +38,7 @@ class MenuFragment : Fragment() {
             aboutButton.setOnClickListener { openAboutFragment() }
             exitButton.setOnClickListener { exit() }
         }
+        listenResult()
     }
 
 
@@ -59,6 +61,13 @@ class MenuFragment : Fragment() {
 
     private fun exit() {
         navigator().goBack()
+    }
+
+    private fun listenResult() {
+        navigator().listenResult(Options::class.java, viewLifecycleOwner) {
+            options = it
+        }
+
     }
 
     companion object {

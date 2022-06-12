@@ -10,6 +10,6 @@ data class Options(
 ) : Parcelable {
 
     companion object {
-        @JvmStatic val DEFAULT = Options(boxCount = 3, isTimerEnabled = false)
+        @JvmStatic val DEFAULT = Options(boxCount = 3, isTimerEnabled = true)
     }
 }
