@@ -20,11 +20,12 @@ import kotlin.math.max
 import kotlin.properties.Delegates
 import kotlin.random.Random
 
-class BoxSelectionFragment : Fragment(),HasToolBarTitle {
+class BoxSelectionFragment : Fragment(), HasToolBarTitle {
 
     override fun getTitleRes(): Int {
         return R.string.box
     }
+
     private lateinit var binding: FragmentBoxSelectionBinding
     private lateinit var options: Options
     private var startTime by Delegates.notNull<Long>()
@@ -47,6 +48,7 @@ class BoxSelectionFragment : Fragment(),HasToolBarTitle {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        Log.d("it0088", "onCreateView: ")
         binding = FragmentBoxSelectionBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -118,14 +120,31 @@ class BoxSelectionFragment : Fragment(),HasToolBarTitle {
         outState.putLong(START_TIME, startTime)
         outState.putInt(RIGHT_INDEX, rightIndex)
         outState.putBoolean(IS_TIME_ENDED, isTimeEnded)
-
+        Log.d("it0088", "onSaveInstanceState: ")
     }
 
     override fun onStop() {
         super.onStop()
         timer?.cancel()
         binding.timerTextView.visibility = View.GONE
+        Log.d("it0088", "onStop: ")
     }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.d("it0088", "onDestroy: $options")
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        Log.d("it0088", "onDestroyView: ")
+    }
+
+    override fun onDetach() {
+        super.onDetach()
+        Log.d("it0088", "onDetach: ")
+    }
+
 
     companion object {
         private const val KEY_OPTIONS = "key_options"
@@ -135,11 +154,6 @@ class BoxSelectionFragment : Fragment(),HasToolBarTitle {
         private const val DURATION = 10_000
 
 
-        fun newInstance(options: Options): BoxSelectionFragment {
-            return BoxSelectionFragment()
-                .apply {
-                    arguments = bundleOf(KEY_OPTIONS to options)
-                }
-        }
+        fun createArgs(options: Options) = bundleOf(KEY_OPTIONS to options)
     }
 }

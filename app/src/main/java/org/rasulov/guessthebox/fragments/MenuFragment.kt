@@ -72,9 +72,7 @@ class MenuFragment : Fragment() {
 
     companion object {
         private const val KEY_OPTIONS = "key_options"
-        fun newInstance(): MenuFragment {
-            return MenuFragment()
-        }
+
     }
 
 

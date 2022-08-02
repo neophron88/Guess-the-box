@@ -124,11 +124,7 @@ class OptionsFragment : Fragment(), HasToolBarCustomAction, HasToolBarTitle {
     companion object {
         private const val KEY_OPTIONS = "key_options"
 
-        fun newInstance(options: Options): OptionsFragment {
-            return OptionsFragment().apply {
-                arguments = bundleOf(KEY_OPTIONS to options)
-            }
-        }
+        fun createArgs(options: Options) = bundleOf(KEY_OPTIONS to options)
     }
 
 

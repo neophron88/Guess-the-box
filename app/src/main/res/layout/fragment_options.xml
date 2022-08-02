@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".fragments.OptionsFragment">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/beginGuideline"
@@ -47,12 +49,12 @@
         <Spinner
             android:id="@+id/boxCountSpinner"
             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/spinner_background"
             android:minWidth="180dp"
             android:minHeight="36dp"
             android:paddingStart="8dp"
-            android:background="@drawable/spinner_background"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/hintTextView" />
 

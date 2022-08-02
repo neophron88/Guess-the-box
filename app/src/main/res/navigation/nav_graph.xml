@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/menuFragment">
+
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="org.rasulov.guessthebox.fragments.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menuFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_optionsFragment"
+            app:destination="@id/optionsFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_boxSelectionFragment"
+            app:destination="@id/boxSelectionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="org.rasulov.guessthebox.fragments.AboutFragment"
+        android:label="about_fragment"
+        tools:layout="@layout/about_fragment" />
+    <fragment
+        android:id="@+id/congratulationFragment"
+        android:name="org.rasulov.guessthebox.fragments.CongratulationFragment"
+        android:label="fragment_box_congratulations"
+        tools:layout="@layout/fragment_box_congratulations" />
+    <fragment
+        android:id="@+id/boxSelectionFragment"
+        android:name="org.rasulov.guessthebox.fragments.BoxSelectionFragment"
+        android:label="fragment_box_selection"
+        tools:layout="@layout/fragment_box_selection" >
+        <action
+            android:id="@+id/action_boxSelectionFragment_to_congratulationFragment"
+            app:destination="@id/congratulationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/optionsFragment"
+        android:name="org.rasulov.guessthebox.fragments.OptionsFragment"
+        android:label="fragment_options"
+        tools:layout="@layout/fragment_options" />
+</navigation>
